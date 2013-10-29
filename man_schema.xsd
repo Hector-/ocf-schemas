@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML 2013 Designer Edition (Trial) 11.1.0.4725 (http://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="rspec">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="slices">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="slice">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string" />
+                    <xs:element name="resources">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="1" maxOccurs="unbounded" name="resource">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="name" type="xs:string" />
+                                <xs:element name="type" type="xs:string" />
+                                <xs:element name="availableConnections">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element minOccurs="0" maxOccurs="unbounded" name="connection" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="status" type="xs:string" />
+                                <xs:element name="expires" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="opennaas" type="xs:string"/>
+      <xs:attribute name="type" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

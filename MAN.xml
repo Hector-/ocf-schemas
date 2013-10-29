@@ -1,0 +1,32 @@
+<rspec opennaas="https://github.com/Hector-/ocf-schemas/blob/master/manifest_schema.xsd" type="manifest">
+  <slices>
+    <slice>
+      <name>Prueba</name>
+      <resources>
+        <resource>
+          <name>urn:publicid:IDN+Prueba:roadm+sliver+junos</name>
+          <type>roadm</type>
+          <availableConnections>
+            <connection>0-1-0:48::0-1-1:48</connection>
+            <connection>0-3-0:184::0-3-128:184</connection>
+          </availableConnections>
+          <status>geni_provisioned</status>
+          <expires>2013-10-27 20:56:04.866523</expires>
+        </resource>
+        <resource>
+          <name>urn:publicid:IDN+Prueba:roadm+sliver+pedrosa</name>
+          <type>roadm</type>
+          <availableConnections>
+            <connection>0-1-0:48::0-1-1:48</connection>
+            <connection>0-1-0:184::0-17-129:184</connection>
+            <connection>0-3-0:48::0-3-1:48</connection>
+            <connection>0-3-0:184::0-16-129:184</connection>
+          </availableConnections>
+          <status>geni_allocated</status>
+          <expires>2013-10-27 19:15:00</expires>
+        </resource>
+      </resources>
+    </slice>
+  </slices>
+</rspec>
+

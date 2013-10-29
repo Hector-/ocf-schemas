@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML 2013 Designer Edition (Trial) 11.1.0.4725 (http://www.liquid-technologies.com)-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="rspec">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resourcesByType">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="type" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType mixed="true">
+                                    <xs:sequence minOccurs="0">
+                                        <xs:element name="resource" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="name" type="xs:string" />
+                                                    <xs:element name="available" type="xs:string" />
+                                                    <xs:element name="activeConnections" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="connection" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="availableEndPoints" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="endPoint" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+                                                                <xs:element name="availableLabels">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:choice>
+                                                                                <xs:sequence>
+                                                                                    <xs:element name="fromLabel" type="xs:unsignedByte" />
+                                                                                    <xs:element name="toLabel" type="xs:unsignedShort" />
+                                                                                </xs:sequence>
+                                                                                <xs:element name="label" type="xs:unsignedShort" minOccurs="0" maxOccurs="unbounded" />
+                                                                            </xs:choice>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="name" type="xs:string" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="opennaas" type="xs:string" />
+            <xs:attribute name="type" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
